@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>автоPLus</title>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- top -->
+		<header class="header">
+
+  <div class="container">
+    <div class="header__inner">
+
+      <img class='header__logo' src="img/logo.png" alt="logo">
+      <div class='header__logo-m'>
+        <img src="img/logo-m.png" alt="logo">
+        <p class='header__logo-m-text'>CHANGAN Центр Москва, ул. Одинцова, 54</p>
+      </div>
+
+      <div class="header__info">
+        <div class="header__info-address">
+          <div class="header__info-icon">
+            <svg width="17" height="20">
+              <use href="img/sprite.svg#geo"></use>
+            </svg>
+          </div>
+          <p class="header__info-text">
+            Москва, ул. Одинцова, 54
+          </p>
+        </div>
+
+        <div class="header__info-phone">
+          <div class="header__info-icon">
+            <svg width="17" height="18">
+              <use href="img/sprite.svg#phone"></use>
+            </svg>
+          </div>
+          <a class="header__info-text" href='tel:+73834567890'>
+            +7 (383) 456-78-90
+          </a>
+        </div>
+
+        <a class="header__info-link" href='tel:+73834567890'>
+          <span>Заказать звонок</span>
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+
+</header>
+		<div class="subheader">
+  <div class="container">
+    <div class="subheader__inner">
+      <h1 class='subheader__title'>
+        Только 3 дня ликвидируем склад CHANGAN по ценам 2023 года
+      </h1>
+      <ul class="subheader__list">
+        <li class="subheader__item">
+          — Льготный кредит под 3,5% всем!
+        </li>
+        <li class="subheader__item">
+          — Рассрочка 0%
+        </li>
+        <li class="subheader__item">
+          — Скидки до 1 620 000₽ до 11.02
+        </li>
+        <li class="subheader__item">
+          — Зимняя резина в подарок!
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+		<!-- list-cars -->
+		<div class="list-cars">
+  <div class="container">
+    <div class="list-cars__inner">
+      <ul class="list-cars__list">
+        <li class="list-cars__item">
+          <img class="list-cars__item-img" src='img/car1.png' />
+          <div class="list-cars__item-model">ALSVIN</div>
+          <div class="list-cars__item-price">
+            <div class='list-cars__item-price-main'>
+              1 670 000 <span>₽</span>
+            </div>
+            <div class='list-cars__item-price-old'>
+              2 250 000 <span>₽</span>
+            </div>
+          </div>
+        </li>
+        <li class="list-cars__item">
+          <img class="list-cars__item-img" src='img/car1.png' />
+          <div class="list-cars__item-model">ALSVIN</div>
+          <div class="list-cars__item-price">
+            <span class='list-cars__item-price-main'>
+              1 670 000 <span>₽</span>
+            </span>
+            <span class='list-cars__item-price-old'>
+              2 250 000 <span>₽</span>
+            </span>
+          </div>
+        </li>
+        <li class="list-cars__item">
+          <img class="list-cars__item-img" src='img/car1.png' />
+          <div class="list-cars__item-model">ALSVIN</div>
+          <div class="list-cars__item-price">
+            <span class='list-cars__item-price-main'>
+              1 670 000 <span>₽</span>
+            </span>
+            <span class='list-cars__item-price-old'>
+              2 250 000 <span>₽</span>
+            </span>
+          </div>
+        </li>
+        <li class="list-cars__item">
+          <img class="list-cars__item-img" src='img/car1.png' />
+          <div class="list-cars__item-model">ALSVIN</div>
+          <div class="list-cars__item-price">
+            <span class='list-cars__item-price-main'>
+              1 670 000 <span>₽</span>
+            </span>
+            <span class='list-cars__item-price-old'>
+              2 250 000 <span>₽</span>
+            </span>
+          </div>
+        </li>
+        <li class="list-cars__item">
+          <img class="list-cars__item-img" src='img/car1.png' />
+          <div class="list-cars__item-model">ALSVIN</div>
+          <div class="list-cars__item-price">
+            <span class='list-cars__item-price-main'>
+              1 670 000 <span>₽</span>
+            </span>
+            <span class='list-cars__item-price-old'>
+              2 250 000 <span>₽</span>
+            </span>
+          </div>
+        </li>
+      </ul>
+      <button class='list-cars__btn'>
+        <svg width="16" height="17">
+          <use href="img/sprite.svg#spinner"></use>
+        </svg>
+        Больше автомобилей
+      </button>
+    </div>
+  </div>
+</div>
+
+		<!-- card-car -->
+		
+		<!-- calc-credit -->
+		<div class="calc-credit">
+  <div class="modal-credit__main">
+
+    <div class="modal-credit__calculation">
+
+      <div class="modal-credit__calculation-main">
+        <div class="modal-credit__calculation-range-block">
+
+          <p class="modal-credit__calculation-range-title">
+            Ваш первоначальный взнос
+          </p>
+          <div class="modal-credit__calculation-range-count">
+            <span class='first-pay'>1 100 000</span>
+            ₽
+          </div>
+
+          <div class="modal-credit__calculation-range-slider">
+            <input class='range-slider range-first-pay' type="range" min='0' max='80' value='20' step='5'>
+
+            <div class="modal-credit__calculation-range-data">
+              <span>0%</span>
+              <span>20%</span>
+              <span>40%</span>
+              <span>60%</span>
+              <span>80%</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-credit__calculation-range-block">
+
+          <p class="modal-credit__calculation-range-title">
+            Срок кредитования
+          </p>
+          <div class="modal-credit__calculation-range-count">
+            <span class='credit-term'>12</span>
+            <span class='credit-term-text'>мес.</span>
+          </div>
+          <div class="modal-credit__calculation-range-slider">
+            <input class='range-slider range-credit-term' type="range" min='6' max='96' value='12' step='6'>
+            <div class="modal-credit__calculation-range-data">
+              <span>6 мес</span>
+              <span>48 мес</span>
+              <span>96 мес</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-credit__calculation-details">
+        <div class="modal-credit__calculation-detail">
+          <p class="modal-credit__calculation-detail-title ">
+            <span class='month-pay'>25 665</span>₽
+          </p>
+          <p class="modal-credit__calculation-detail-subtitle">Ежемесячный платеж</p>
+        </div>
+
+        <div class="modal-credit__calculation-detail">
+          <p class="modal-credit__calculation-detail-title month-pay">3,5 %</p>
+          <p class="modal-credit__calculation-detail-subtitle">Льготная ставка по кредиту для всех до 12 января
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="modal-credit__form-check">
+
+      <p class='modal-credit__form-check-title'>Контактная информация</p>
+
+      <form class="modal-credit__form form">
+
+        <div class="form__item">
+          <input class="form__input input__name" type="text" name="Имя" placeholder="Фамилия, Имя и Отчество" />
+        </div>
+
+        <div class="form__item">
+          <input class="form__input input__tel" type="tel" name="Телефон" placeholder="Номер телефона" />
+          <span class='input__tel-text'>Ваш номер телефона</span>
+        </div>
+
+        <button class="form__item-btn">
+          Оставить заявку
+        </button>
+      </form>
+
+      <div class="modal-credit__checks">
+
+        <div class="modal-credit__check-item">
+          <div class="modal-credit__check-input modal-credit__check-input-active">
+            <svg width="12" height="10">
+              <use href="img/sprite.svg#modal_credit_check"></use>
+            </svg>
+          </div>
+
+          <p class="modal-credit__check-text">
+            Подтверждаю наличие гражданства РФ
+          </p>
+        </div>
+
+        <div class="modal-credit__check-item">
+          <div class="modal-credit__check-input modal-credit__check-input-active">
+            <svg width="12" height="10">
+              <use href="img/sprite.svg#modal_credit_check"></use>
+            </svg>
+          </div>
+          <p class="modal-credit__check-text">
+            Согласен на безопасную обработку данных
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+		<!-- bank_partner -->
+		<section class='bank-partners'>
+  <div class="container">
+    <div class="bank-partners__inner">
+      <div class="bank-partner">
+        <div class="bank-partner">
+          <img src="bank-partner" alt="img/sprite.svg#">
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="153" height="39">
+            <use href="img/sprite.svg#logo_bank--tinkoff"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="129" height="35">
+            <use href="img/sprite.svg#logo_bank--alfa"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="90" height="33">
+            <use href="img/sprite.svg#logo_bank--vtb"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="163" height="39">
+            <use href="img/sprite.svg#logo_bank--rossel"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="149" height="32">
+            <use href="img/sprite.svg#logo_bank--gazProm2"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="141" height="38">
+            <use href="img/sprite.svg#logo_bank--raifaiz"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="147" height="28">
+            <use href="img/sprite.svg#logo_bank--opening"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="154" height="34">
+            <use href="img/sprite.svg#logo_bank--sovcom"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="151" height="35">
+            <use href="img/sprite.svg#logo_bank--gazProm"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="80" height="40">
+            <use href="img/sprite.svg#logo_bank--pochta"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="143" height="28">
+            <use href="img/sprite.svg#logo_bank--uralsib"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="94" height="35">
+            <use href="img/sprite.svg#logo_bank--atb"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="165" height="46">
+            <use href="img/sprite.svg#logo_bank--avangard"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="154" height="23">
+            <use href="img/sprite.svg#logo_bank--primSocBank"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="146" height="35">
+            <use href="img/sprite.svg#logo_bank--otp"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="150" height="34">
+            <use href="img/sprite.svg#logo_bank--ingostrah"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="112" height="35">
+            <use href="img/sprite.svg#logo_bank--zenit"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="150" height="32">
+            <use href="img/sprite.svg#logo_bank--centrInvest"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="151" height="36">
+            <use href="img/sprite.svg#logo_bank--loko"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg width="154" height="36" viewBox="0 0 154 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M36.91 6.123h6.781c3.434 0 5.751 2.73 5.751 5.377 0 2.73-2.317 5.46-5.75 5.46h-4.207v4.384H36.91V6.123Zm6.524 8.52c2.232 0 3.433-1.654 3.433-3.143 0-1.572-1.201-3.143-3.433-3.143h-3.949v6.287h3.949Zm6.78 1.159c0-3.226 2.318-5.79 5.924-5.79 3.69 0 5.493 2.977 5.493 5.955v.58H52.79c.343 1.902 2.06 2.977 4.378 2.977 1.459 0 2.66-.413 3.69-.992V20.6c-.944.662-2.489 1.075-4.205 1.075-3.606 0-6.438-2.316-6.438-5.873Zm8.842-1.158c0-1.158-.944-2.648-3.004-2.648-1.974 0-3.09 1.324-3.176 2.648h6.18Zm4.807-4.385h2.575v4.302h5.837v-4.302h2.575v11.085h-2.575v-4.632h-5.837v4.632h-2.575V10.26Zm13.133 5.543c0-3.226 2.317-5.79 5.922-5.79 3.691 0 5.494 2.977 5.494 5.955v.58h-8.841c.343 1.902 2.06 2.977 4.378 2.977 1.459 0 2.66-.413 3.69-.992V20.6c-.944.662-2.489 1.075-4.205 1.075-3.606 0-6.438-2.316-6.438-5.873Zm8.841-1.158c0-1.158-.944-2.648-3.004-2.648-1.974 0-3.09 1.324-3.176 2.648h6.18Zm4.034 1.158c0-3.475 2.833-5.79 6.266-5.79 1.374 0 2.404.247 3.434.744v2.068c-1.03-.497-1.974-.745-3.09-.745-2.232 0-4.12 1.49-4.12 3.723 0 2.233 1.802 3.723 4.12 3.723 1.287 0 2.317-.249 3.262-.828v2.068c-1.116.58-2.232.91-3.691.91-3.348 0-6.18-2.399-6.18-5.873Zm11.159 0c0-3.475 2.833-5.79 6.266-5.79 1.374 0 2.404.247 3.434.744v2.068c-1.03-.497-1.975-.745-3.091-.745-2.231 0-4.12 1.49-4.12 3.723 0 2.233 1.803 3.723 4.12 3.723 1.288 0 2.318-.249 3.262-.828v2.068c-1.116.58-2.231.91-3.691.91-3.261 0-6.18-2.399-6.18-5.873Zm23.948 3.474v1.82c-.343.248-.944.331-1.459.331-1.116 0-2.06-.496-2.403-1.572-.859.91-2.232 1.738-4.206 1.738-2.404 0-4.292-1.324-4.292-3.723 0-2.482 1.888-3.226 4.378-3.226h3.948v-.166c0-1.902-1.631-2.399-3.347-2.399-1.374 0-2.747.497-3.606.993v-2.15c.859-.415 2.146-.91 4.206-.91 3.09 0 5.322 1.405 5.322 4.218v4.136c0 .662.429 1.076.944 1.076 0 0 .258 0 .515-.166Zm-4.206-2.73h-3.004c-1.631 0-2.747.331-2.747 1.407 0 1.24 1.116 1.654 2.49 1.654 1.373 0 2.661-.662 3.261-1.323v-1.738Zm6.009-6.287h2.575v4.302h5.837v-4.302h2.575v11.085h-2.575v-4.632h-5.837v4.632h-2.575V10.26Zm13.133 5.543c0-3.475 2.833-5.79 6.266-5.79 1.373 0 2.404.247 3.434.744v2.068c-1.03-.497-1.975-.745-3.091-.745-2.231 0-4.12 1.49-4.12 3.723 0 2.233 1.803 3.723 4.12 3.723 1.288 0 2.318-.249 3.262-.828v2.068c-1.116.58-2.232.91-3.691.91-3.347 0-6.18-2.399-6.18-5.873ZM36.91 27.3h1.202v2.15l2.06-2.15h1.46l-2.404 2.481 2.832 2.979h-1.459l-2.403-2.482v2.482H36.91V27.3Zm6.695 0h2.49c1.201 0 1.974.661 1.974 1.654 0 .993-.773 1.655-1.974 1.655h-1.288v2.15h-1.202V27.3Zm2.404 2.316c.515 0 .858-.248.858-.662 0-.413-.343-.662-.858-.662h-1.202v1.324h1.202Zm3.777-2.316h4.12v.992H50.9v1.076h2.404v.992H50.9v1.407h3.176v.992h-4.291V27.3Zm5.837 4.467h.515c.515-.745.772-1.737.772-3.557v-.828h3.949v4.468h.772V34h-1.116v-1.075h-3.862V34h-1.116v-2.233h.086Zm4.12 0v-3.475h-1.631c0 1.159-.086 2.317-.601 3.475h2.232Zm3.69-4.467h1.202v3.557l2.747-3.557h1.03v5.46h-1.116v-3.558l-2.918 3.558h-.944V27.3Zm11.331 0v.992h-1.802v4.468H71.76v-4.468h-1.803V27.3h4.807Z"
+              fill="#323E48" />
+            <path
+              d="M7.127 27.3H3.436V11.996c0-5.212 4.463-9.514 9.87-9.514h12.19v9.431c0 5.294-4.464 9.513-9.872 9.513h-6.18l1.373-3.557h4.722c3.433 0 6.18-2.647 6.18-5.956V6.04H13.22c-3.434 0-6.18 2.647-6.18 5.956V27.3h.086Z"
+              fill="url(#a)" />
+            <defs>
+              <radialGradient id="a" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                gradientTransform="matrix(21.3621 0 0 20.5878 4.173 26.301)">
+                <stop stop-color="#D6005E" />
+                <stop offset="1" stop-color="#E3448A" />
+              </radialGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="165" height="16">
+            <use href="img/sprite.svg#logo_bank--home"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="145" height="26">
+            <use href="img/sprite.svg#logo_bank--driveClick"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="144" height="16">
+            <use href="img/sprite.svg#logo_bank--ekspo"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="143" height="43">
+            <use href="img/sprite.svg#logo_bank--absolute"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="95" height="37">
+            <use href="img/sprite.svg#logo_bank--psb"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="121" height="39">
+            <use href="img/sprite.svg#logo_bank--mkb"></use>
+          </svg>
+        </div>
+        <div class="bank-partner__bank">
+          <svg class="bank" width="154" height="33">
+            <use href="img/sprite.svg#logo_bank--orange"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bank-partner__btn-show">
+    <p class='bank-partner__btn-show__text'>Ещё 15 банков — партнёров</p>
+    <svg class="arrow-bottom" width="24" height="24">
+      <use href="img/sprite.svg#arrow_bottom"></use>
+    </svg>
+  </div>
+</section>
+		<!-- configuration -->
+		
+
+		<!-- trade-in-credit -->
+		
+
+		<!-- advantage -->
+		
+
+		<!-- map -->
+		
+
+		<!-- footer -->
+		<footer class='footer'>
+
+  <div class="container">
+    <div class="footer__inner">
+
+      <p class="footer__text">
+        Юридический адрес:105005, НОВОСИБИРСКАЯ ОБЛ., Г. НОВОСИБИРСК, УЛИЦА СТАНЦИОННАЯ, ЗД. 53, ЭТАЖ 1ИНН:
+        5404234589КПП: 540401001ОГРН: 1225400002057
+        Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при
+        каких условиях не является публичной офертой, определяемой положениями ч. 2 ст. 437 Гражданского кодекса
+        Российской Федерации. Для получения подробной информации о стоимости автомобилей, пожалуйста, обратитесь к
+        менеджерам автосалона.
+        Стоимость подарка не зависит от стоимости купленного, а/м, покупатель может выбрать любой подарок из
+        перечисленных при покупке, а/м.
+        Условия кредитования Основные условия кредитования ПАО «Сбербанк» (Генеральная лицензия Банка №1481 от
+        11.08.2015) на покупку нового автомобиля по продукту «Кредит на приобретение нового автомобиля» валюта кредита –
+        рубли РФ; сумма кредита от 200 000 до 4 500 000 руб. Первоначальный взнос по кредиту до 70%. Сумма ежемесячного
+        платежа от 1 437 руб. до 87 854 руб., без комиссий. Срок кредита от 6 мес. до 8 лет. Обеспечение по кредиту –
+        залог приобретаемого автомобиля. Условия кредита действительны на 15.04.2022 и могут быть изменены Банком.
+        Процентная ставка по кредиту от 3,9% годовых на все марки.
+        Партнер по страхованию: АО «Группа Ренессанс Страхование». Генеральная лицензия СИ № 1284 от 25.01.2019 без
+        ограничения срока действия.
+        *Пользователь данного интернет-ресурса обратившийся, через специальные формы связи, размещённые на данном сайте,
+        а также по средствам телефонного звонка, выражает свое безусловное согласие продолжить устную или письменную
+        коммуникацию с помощью электронных средств связи, в т.ч.: sms-информирование, e-mail-рассылка и т.п. и т.д.
+      </p>
+
+      <div class="footer__links">
+        <a class="footer__link" href=''>
+          Лицензионное соглашение
+        </a>
+        <a class="footer__link" href=''>
+          Политика конфиденциальности
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</footer>
+
+		<!-- other -->
+		
+	</div>
+	<script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" id="yandex_api"></script>
+<script>
+  function yandexiniti() {
+    ymaps.ready(init);
+    function init() {
+      const iconimage_default =
+        "data:image/svg+xml,%3Csvg width='29' height='38' viewBox='0 0 29 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.7' d='M14.5 1.125C10.9362 1.12501 7.51828 2.57367 4.99826 5.15229C2.47824 7.73091 1.06251 11.2283 1.0625 14.875C1.0625 27.25 14.5 36.875 14.5 36.875C14.5 36.875 27.9375 27.25 27.9375 14.875C27.9375 11.2283 26.5218 7.73091 24.0017 5.15229C21.4817 2.57367 18.0638 1.12501 14.5 1.125ZM14.5 20.375C13.4369 20.375 12.3977 20.0524 11.5138 19.4481C10.6299 18.8437 9.94097 17.9848 9.53415 16.9798C9.12733 15.9748 9.02088 14.8689 9.22828 13.802C9.43567 12.7351 9.94759 11.7551 10.6993 10.9859C11.451 10.2167 12.4087 9.6929 13.4514 9.48068C14.494 9.26846 15.5748 9.37738 16.5569 9.79366C17.5391 10.2099 18.3785 10.9149 18.9691 11.8194C19.5598 12.7238 19.875 13.7872 19.875 14.875C19.875 16.3337 19.3087 17.7326 18.3007 18.7641C17.2927 19.7955 15.9255 20.375 14.5 20.375V20.375Z' fill='red'/%3E%3Cpath d='M14.5 20.375C17.4685 20.375 19.875 17.9126 19.875 14.875C19.875 11.8374 17.4685 9.375 14.5 9.375C11.5315 9.375 9.125 11.8374 9.125 14.875C9.125 17.9126 11.5315 20.375 14.5 20.375Z' stroke='%234594F0' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M27.9375 14.875C27.9375 27.25 14.5 36.875 14.5 36.875C14.5 36.875 1.0625 27.25 1.0625 14.875C1.0625 11.2283 2.47823 7.73091 4.99825 5.15228C7.51827 2.57366 10.9362 1.125 14.5 1.125C18.0638 1.125 21.4817 2.57366 24.0017 5.15228C26.5218 7.73091 27.9375 11.2283 27.9375 14.875V14.875Z' stroke='%234594F0' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A";
+
+      const center = [56.064540, 92.907010];
+      const zoom_value = 16;// Уровень масштабирования. Допустимые значения: от 0 (весь мир) до 19.
+
+      const myMap = new ymaps.Map("map", {
+        center: center,
+
+        zoom: zoom_value,
+        suppressMapOpenBlock: true,
+        controls: []
+      }, {
+        suppressMapOpenBlock: true
+      });
+
+      const myPlacemark_1 = new ymaps.Placemark(center, {
+        // Хинт показывается при наведении мышкой на иконку метки.
+        hintContent: 'City,Address',
+        // Балун откроется при клике по метке.
+        balloonContent: 'City, address<br><a target="_blank" href="https://yandex.ru/maps/?rtext=~52.294413,104.308912">Как добраться</a>',
+      }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#image',
+        // Своё изображение иконки метки.
+        iconImageHref: iconimage_default,
+        // Размеры метки.
+        iconImageSize: [29, 38],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-15, -38]
+      });
+
+      const zoomControl = new ymaps.control.ZoomControl({
+        options: {
+          size: "small",
+          adjustMapMargin: true,
+          position: {
+            right: 10,
+            bottom: 50,
+          }
+        }
+      });
+
+      //После того как метка была создана, добавляем её на карту.
+      myMap.geoObjects.add(myPlacemark_1);
+
+      // myMap.controls.add(zoomControl);
+      myMap.behaviors.disable('scrollZoom');
+
+    }
+  }
+
+  yandexiniti();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  // слайдер для карточки авто
+  const cardSlider = document.querySelector('.card__swiper');
+  const cardSliderMini = document.querySelector('.card__swiper-mini');
+
+  let swiperCardMini = new Swiper(cardSliderMini, {
+    slidesPerView: 'auto',
+    spaceBetween: 1,
+  });
+
+  let swiperCard = new Swiper(cardSlider, {
+    centeredSlides: true,
+    slidesPerView: '1',
+    effect: 'fade',
+    thumbs: {
+      swiper: swiperCardMini,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  // слайдер для карточки с похожими авто similar car
+  // const cardBasic = document.querySelector('.similar_car__card-basic');
+  // const sliderBasic = cardBasic.querySelectorAll('.similar_car__swiper');
+
+  // const initSlider = slider => {
+  //   let swiper = new Swiper(slider, {
+  //     slidesPerView: 'auto',
+  //     spaceBetween: 1,
+  //     breakpoints: {
+  //       560: {
+  //         slidesPerView: '1',
+  //         effect: 'fade',
+  //       },
+  //     },
+  //   });
+  // };
+
+  // sliderBasic.forEach(slider => {
+  //   initSlider(slider);
+  // });
+
+  // похожие авто - слайдер
+  const choiceCarSwipers = document.querySelectorAll(".choice-car__swiper");
+
+  if (choiceCarSwipers) {
+    choiceCarSwipers.forEach((slider) => {
+      const slides = slider.querySelectorAll(".choice-car__slide"); // кол-во слайдов
+      const pagination = slider.querySelector(".choice-car__pagination");
+
+      if (slides.length > 1) {
+        slides.forEach((slide, slideIndex) => {
+          const span =
+            slideIndex === 0
+              ? '<span class="choice-car__bullet bullet_hover"></span>'
+              : '<span class="choice-car__bullet"></span>';
+          pagination.insertAdjacentHTML("beforeend", span);
+
+          slide.addEventListener("mouseenter", () => {
+            pagination
+              .querySelectorAll(".choice-car__bullet")
+              .forEach((bullet, bulletIndex) => {
+                bullet.classList.remove("bullet_hover");
+                if (slideIndex === bulletIndex) {
+                  bullet.classList.add("bullet_hover");
+                }
+              });
+          });
+
+          slide.addEventListener("mouseleave", () => {
+            pagination
+              .querySelectorAll(".choice-car__bullet")
+              .forEach((bullet, bulletIndex) => {
+                bullet.classList.remove("bullet_hover");
+                if (bulletIndex === 0) {
+                  bullet.classList.add("bullet_hover");
+                }
+              });
+          });
+        });
+      }
+    });
+  }
+
+</script>
+<script src="js/main.min.js"></script>
+</body>
+
+</html>

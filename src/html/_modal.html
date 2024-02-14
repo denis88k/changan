@@ -1,0 +1,79 @@
+<!-- discount -->
+<div class="modal modal-discount">
+  <div class="modal__body">
+
+    <div class="modal__inner">
+      <div class="modal__close">
+        <svg width="40" height="40">
+          <use href="img/sprite.svg#modal_close"></use>
+        </svg>
+      </div>
+      <div class="modal-discount__content">
+
+        <div class="modal-discount__title">
+          <span>Скидка 25%</span> до 29 января по секретному промокоду
+        </div>
+
+        <div class="modal-discount__time">
+          <div class="timer-promo">
+            <div class="timer-promo__inner">
+              <div class="timer">
+                <div class="timer__value">
+                  <span class="timer__day timer-count">6</span>
+                  <span class="timer__day-text timer-text">дней</span>
+                </div>
+                <div class="timer__value">
+                  <span class="timer__hour timer-count">15</span>
+                  <span class="timer__hour-text timer-text">часов</span>
+                </div>
+                <div class="timer__value">
+                  <span class="timer__min timer-count">55</span>
+                  <span class="timer__min-text timer-text">мин.</span>
+                </div>
+              </div>
+              <p class="timer-promo__text dot">
+                До конца распродажи!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <form class="modal-discount__form form">
+          <div class="form__item">
+            <input class="form__input input__tel" type="tel" name="Телефон" placeholder="+7 (___) ___ - __ - __" />
+            <span class='input__tel-text'>Ваш номер телефона</span>
+          </div>
+          <div class="form__item">
+            <input class="form__input input__name" type="text" name="Имя" placeholder="Как вас зовут?" />
+          </div>
+          <button class="form__item-btn">
+            Получить промокод
+          </button>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- удачная отправка формы -->
+<div class="modal modal-sendForm">
+  <div class="modal__body">
+
+    <div class="modal__inner">
+      <div class="modal__close">
+        <svg width="40" height="40">
+          <use href="img/sprite.svg#modal_close"></use>
+        </svg>
+      </div>
+      <div class="modal-sendForm__title">Ваша заявка успешно <br>отправлена</div>
+      <div class="modal-sendForm__subtitle">В скором времени с вами свяжутся наши менеджеры</div>
+    </div>
+  </div>
+</div>
+
+<!-- отчёт о машине -->
+
+@include('_report.html')

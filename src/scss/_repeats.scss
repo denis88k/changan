@@ -1,0 +1,31 @@
+.title {
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 130%;
+	color: var(--text-black);
+	@media screen and (max-width: 798px) {
+		font-size: 20px;
+	}
+}
+
+.btn {
+	font-weight: 600;
+	font-size: 18px;
+	text-align: center;
+	color: var(--white);
+	background-color: var(--blue);
+	transition: all 0.3s linear;
+	cursor: pointer;
+
+	&:hover {
+		background-color: var(--hover);
+	}
+}
+
+// выход за границы container
+// position: relative;
+// left: 50%;
+// width: 100vw;
+// transform: translateX(-50%);
+
+
