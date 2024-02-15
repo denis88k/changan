@@ -1,90 +1,54 @@
 .advantages {
 	&__inner {
-		position: relative;
 		display: flex;
+		justify-content: center;
+		margin-top: 90px;
+		margin-bottom: 90px;
+		gap: 20px;
 
-		// justify-content: space-between;
-		padding: 20px 0 25px;
-
-		// margin-top: 20px;
-		// margin-bottom: 25px;
-		@media screen and (max-width: 1350px) {
-			overflow-x: auto;
-		}
-		@media screen and (max-width: 555px) {
-			padding: 10px 0;
-		}
-	}
-
-	.container{
-		@media screen and (max-width: 1180px) {
-			padding: 0;
+		@media screen and (max-width: 1105px) {
+			flex-direction: column;
+			align-items: center;
+			margin-top: 26px;
+			margin-bottom: 40px;
 		}
 	}
 }
 
 .advantage {
 	&__block {
-		display: flex;
-		align-items: center;
-		border-radius: 5px;
-		padding-top: 4px;
-		padding-bottom: 4px;
-		box-shadow: 0 4px 16.2px 0 rgba(0, 0, 0, 0.09);
-		background-color: var(--white);
-		cursor: pointer;
-
-		&:not(:last-child) {
-			margin-right: 37px;
-		}
-		@media screen and (max-width: 615px) {
-			padding-top: 9px;
-			padding-bottom: 9px;
-
-			&:not(:last-child) {
-				margin-right: 10px;
-			}
+		border: 1px solid #d5d5d5;
+		border-radius: 20px;
+		padding: 20px 28px 20px 40px;
+		width: 100%;
+		height: 148px;
+		max-width: 460px;
+		
+		@media screen and (max-width: 1105px) {
+			padding: 10px 11px 10px 9px;
 		}
 	}
 
-	// &__block-img{
-	// @media screen and (max-width: 615px) {
-	// 	height: 37px;
-	// }
-	// }
-
-	&__block-img img {
-		max-width: none;
-		@media screen and (max-width: 615px) {
-			height: 37px;
-		}
+	&__block-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto 10px;
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		background: #f7f7f7;
 	}
 
 	&__block-text {
-		margin: 0 20px;
-		font-weight: 500;
-		font-size: 16px;
-		line-height: 130%;
-		color: var(--text-black);
-		@media screen and (max-width: 1200px) {
-			width: 112px;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 120%;
+		text-align: center;
+		color: var(--black);
+
+		@media screen and (max-width: 1105px) {
+			font-size: 16px;
 		}
-
-		@media screen and (max-width: 615px) {
-			width: 89.5px;
-		}
-
-		@media screen and (max-width: 555px) {
-			margin: 0 10px;
-			font-size: 12px;
-		}
-	}
-
-	&__block:first-child{
-		margin-left: 15px;
-	}
-
-	&__block:last-child{
-		margin-right: 15px;
 	}
 }

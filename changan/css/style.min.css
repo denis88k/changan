@@ -771,7 +771,7 @@ html,
 body {
   height: 100%;
   min-width: 375px;
-  font-family: "Poppins", sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
 body {
@@ -1079,13 +1079,13 @@ body._lock {
 .list-cars__item {
   border: 1px solid #f0f0f0;
   border-radius: 30px;
-  padding: 9px 19px 10px 27px;
+  padding: 9px 27px 10px 19px;
   background-color: #f4f4f4;
   cursor: pointer;
 }
 @media screen and (max-width: 900px) {
   .list-cars__item {
-    padding: 11px 12px 12px 10px;
+    padding: 10px 7px 12px 10px;
   }
 }
 @media screen and (max-width: 900px) {
@@ -1094,7 +1094,9 @@ body._lock {
   }
 }
 .list-cars__item-model {
-  margin-bottom: 7px;
+  margin-top: -4px;
+  margin-bottom: 8px;
+  margin-left: 6px;
   font-weight: 600;
   font-size: 20px;
   line-height: 120%;
@@ -1102,13 +1104,21 @@ body._lock {
 }
 @media screen and (max-width: 900px) {
   .list-cars__item-model {
-    margin-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 4px;
+    margin-left: 0;
     font-size: 16px;
   }
 }
 .list-cars__item-price {
   display: flex;
   align-items: center;
+  margin-left: 6px;
+}
+@media screen and (max-width: 900px) {
+  .list-cars__item-price {
+    margin-left: -1px;
+  }
 }
 .list-cars__item-price-main {
   margin-right: 14px;
@@ -1119,8 +1129,11 @@ body._lock {
 }
 @media screen and (max-width: 900px) {
   .list-cars__item-price-main {
-    margin-right: 7px;
-    font-size: 16px;
+    margin-right: 3px;
+    font-size: 15px;
+  }
+  .list-cars__item-price-main span {
+    margin-left: -4px;
   }
 }
 .list-cars__item-price-old {
@@ -1155,84 +1168,453 @@ body._lock {
   }
 }
 
-.bank-partner {
-  margin-top: 80px;
-  margin-bottom: 60px;
+.card-car .container {
+  padding: 0 calc(22px / 2);
+  max-width: 1442px;
 }
-.bank-partner__inner {
+.card-car__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 95px;
+  border: 1px solid #e9e9e9;
+  border-radius: 60px;
+}
+@media screen and (max-width: 900px) {
+  .card-car__inner {
+    margin-top: 31px;
+  }
+}
+.card-car__left {
+  display: flex;
+  flex-direction: column;
+  border-radius: 60px;
+  padding: 20px 35px 40px;
+  width: 100%;
+  max-width: 801px;
+  background-color: #f7f7f7;
+}
+@media screen and (max-width: 900px) {
+  .card-car__left {
+    border-radius: 30px;
+    padding: 9px 21px 0 25px;
+  }
+}
+.card-car__left-subtitle {
+  margin-bottom: 6px;
+}
+.card-car__left-img {
+  align-self: center;
+}
+.card-car__left-btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 31px;
+  gap: 20px;
+}
+@media screen and (max-width: 900px) {
+  .card-car__left-btns {
+    display: none;
+  }
+}
+.card-car__left-btn {
+  border-radius: 77px;
+  width: 100%;
+  height: 65px;
+  max-width: 356px;
+}
+.card-car__btn-white {
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  background-color: transparent;
+}
+.card-car__btn-white:hover {
+  color: var(--white);
+}
+.card-car__right {
+  display: flex;
+  flex-direction: column;
+}
+.card-car__right-price {
+  margin-top: 35px;
+}
+.card-car__right-price-month {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.card-car__right-advantages {
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.card-car__right-advantages-item {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  text-shadow: 0 4px 21px rgba(0, 0, 0, 0.15);
+  color: var(--blue);
+}
+.card-car__right-text {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  max-width: 454px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: var(--black);
+}
+.card-car__left-title, .card-car__right-price {
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 120%;
+  color: var(--black);
+}
+@media screen and (max-width: 900px) {
+  .card-car__left-title, .card-car__right-price {
+    font-size: 30px;
+  }
+}
+.card-car__left-subtitle, .card-car__right-price-month {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--blue);
+}
+@media screen and (max-width: 900px) {
+  .card-car__left-subtitle, .card-car__right-price-month {
+    font-size: 12px;
+  }
+}
+.card-car__right-price, .card-car__right-price-month, .card-car__right-advantages, .card-car__right-text, .card-car__right-form {
+  padding-left: 40px;
+}
+.card-car__right-form {
+  display: flex;
+  gap: 14px;
+}
+@media screen and (max-width: 900px) {
+  .card-car__right-form {
+    gap: 10px;
+  }
+}
+.card-car .form__item {
+  width: 100%;
+  height: 65px;
+  max-width: 256px;
+}
+.card-car .form__input {
+  border: 1px solid #d8d8d8;
+  border-radius: 40px;
+  padding: 20px 20px 20px 25px;
+  width: 100%;
+  color: var(--black);
+  background: #f4f4f4;
+}
+.card-car .form__input::placeholder {
+  color: var(--grey);
+}
+.card-car .form__item-btn {
+  border-radius: 40px;
+  width: 100%;
+  height: 65px;
+  max-width: 256px;
+}
+@media screen and (max-width: 900px) {
+  .card-car .form__item-btn {
+    font-size: 16px;
+  }
+}
+.card-car__right-check {
+  margin-top: 5px;
+  margin-right: 52px;
+  font-weight: 500;
+  font-size: 10px;
+  text-align: right;
+  color: var(--grey);
+}
+.card-car__right-check a {
+  color: var(--blue);
+}
+.card-car__left, .card-car__right {
+  flex-grow: 1;
+}
+
+.configuration {
+  display: flex;
+  flex-direction: column;
+}
+.configuration__list-border {
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+.configuration__list-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 170%;
+  color: var(--black);
+}
+.configuration__list-count {
+  font-weight: 400;
+  font-size: 16px;
+  color: #7b7b7b;
+}
+.configuration__lists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.configuration__lists-item {
+  border: 1px solid #f0f0f0;
+  border-radius: 20px;
+  background-color: #f4f4f4;
+}
+.configuration__lists-top {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 20px;
+}
+.configuration__lists-model {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: var(--black);
+}
+.configuration__lists-data {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: #7b7b7b;
+}
+.configuration__lists-img {
+  width: 139px;
+  height: 74px;
+}
+.configuration__lists-bottom {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.configuration__lists-price {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  color: var(--blue);
+}
+.configuration__lists-month {
+  font-weight: 400;
+  font-size: 15px;
+  color: #7b7b7b;
+}
+.configuration__lists-btn {
+  border-radius: 1000px;
+  width: 100%;
+  height: 54px;
+  max-width: 237px;
+}
+.configuration__list-btn {
+  width: 100%;
+}
+
+.bank-partners__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 35px 0 95px;
+  gap: 10px 5px;
+}
+@media screen and (max-width: 900px) {
+  .bank-partners__inner {
+    margin: 15px 0 53px;
+    row-gap: 5px;
+  }
+}
+
+.bank-partner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  width: 188px;
+  height: 52px;
+  box-shadow: 0 7px 29px 0 rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+}
+@media screen and (max-width: 900px) {
+  .bank-partner {
+    width: 80px;
+    height: 28px;
+  }
+}
+
+.advantages__inner {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  margin-bottom: 90px;
+  gap: 20px;
+}
+@media screen and (max-width: 1105px) {
+  .advantages__inner {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 26px;
+    margin-bottom: 40px;
+  }
+}
+
+.advantage__block {
+  border: 1px solid #d5d5d5;
+  border-radius: 20px;
+  padding: 20px 28px 20px 40px;
+  width: 100%;
+  height: 148px;
+  max-width: 460px;
+}
+@media screen and (max-width: 1105px) {
+  .advantage__block {
+    padding: 10px 11px 10px 9px;
+  }
+}
+.advantage__block-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: #f7f7f7;
+}
+.advantage__block-text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  text-align: center;
+  color: var(--black);
+}
+@media screen and (max-width: 1105px) {
+  .advantage__block-text {
+    font-size: 16px;
+  }
+}
+
+.map-details__inner {
+  position: relative;
+}
+.map-details__title {
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1075px) {
+  .map-details__title {
+    margin-bottom: 15px;
+  }
+}
+.map-details__address {
+  position: absolute;
+  right: 25px;
+  bottom: 27px;
+  z-index: 5;
   display: flex;
   flex-direction: column;
   border-radius: 20px;
-  padding: 25px 56px 40px;
+  padding: 25px;
+  width: 100%;
+  max-width: 472px;
   box-shadow: 0 4px 16.2px 0 rgba(0, 0, 0, 0.09);
   background-color: var(--white);
 }
-@media screen and (max-width: 500px) {
-  .bank-partner__inner {
-    padding-right: 0;
-    padding-left: 0;
-    box-shadow: none;
-  }
-}
-@media screen and (max-width: 400px) {
-  .bank-partner__inner {
+@media screen and (max-width: 1075px) {
+  .map-details__address {
     position: relative;
     left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-bottom: 20px;
+    padding: 15px;
     width: 100vw;
     transform: translateX(-50%);
   }
 }
-.bank-partner__title {
-  margin-left: 15px;
-}
-.bank-partner__banks {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 20px;
-  gap: 13px;
-}
-@media (max-width: 1420px) {
-  .bank-partner__banks {
-    gap: calc(10px + 3 * (100vw - 320px) / 1100);
-  }
-}
-@media screen and (max-width: 500px) {
-  .bank-partner__banks {
-    margin-right: auto;
-    margin-left: auto;
-    gap: 10px;
-  }
-}
-.bank-partner__bank {
+.map-details__address-data {
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  width: 175px;
-  height: 61px;
-  box-shadow: 0 3.256px 13.187px 0 rgba(0, 0, 0, 0.09);
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 15px 23px;
+  box-shadow: 0 4px 16.2px 0 rgba(0, 0, 0, 0.09);
   background-color: var(--white);
-  cursor: pointer;
 }
-.bank-partner__btn-show {
-  display: none;
-}
-@media screen and (max-width: 688px) {
-  .bank-partner__btn-show {
-    display: flex;
-    justify-content: center;
-    padding: 22px 0;
-    background-color: var(--btn-bkg);
-    cursor: pointer;
+@media screen and (max-width: 998px) {
+  .map-details__address-data {
+    padding: 12px 18px;
   }
 }
-.bank-partner__btn-show__text {
-  margin-right: 5px;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 130%;
-  color: var(--red);
+.map-details__address-data__info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.map-details__address-data__info-title {
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 175%;
+  color: var(--text-black);
+}
+@media screen and (max-width: 998px) {
+  .map-details__address-data__info-title {
+    font-size: 16px;
+  }
+}
+.map-details__address-data__info-subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 175%;
+  color: var(--text-grey);
+}
+@media screen and (max-width: 998px) {
+  .map-details__address-data__info-subtitle {
+    font-size: 12px;
+  }
+}
+.map-details .update-car {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 998px) {
+  .map-details .update-car {
+    margin-bottom: 14px;
+  }
+}
+.map-details__address-btn {
+  border-radius: 10px;
+  padding: 30px 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+}
+@media screen and (max-width: 998px) {
+  .map-details__address-btn {
+    padding: 23px 0;
+  }
+}
+
+.map {
+  overflow: hidden;
+  border-radius: 15px;
+  height: 542px;
+}
+@media screen and (max-width: 998px) {
+  .map {
+    height: 360px;
+  }
+}
+
+.ymaps-2-1-79-copyright {
+  display: none !important;
 }
 
 .footer-under {
