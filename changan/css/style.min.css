@@ -1891,6 +1891,9 @@ body._lock {
     margin-top: 15px;
     margin-bottom: 53px;
   }
+  .bank-partner .container {
+    padding: 0 7.5px;
+  }
 }
 .bank-partner__inner {
   display: flex;
@@ -1924,6 +1927,11 @@ body._lock {
   box-shadow: 0 3.256px 13.187px 0 rgba(0, 0, 0, 0.09);
   background-color: var(--white);
   cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+  .bank-partner__bank {
+    width: 174px;
+  }
 }
 
 .configuration {
