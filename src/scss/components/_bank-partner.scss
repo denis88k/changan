@@ -4,6 +4,7 @@
 	@media screen and (max-width: 500px) {
 		margin-top: 15px;
 		margin-bottom: 53px;
+
 		.container{
 			padding: 0 calc(15px / 2);
 		}
@@ -39,7 +40,7 @@
 		cursor: pointer;
 
 		@media screen and (max-width: 500px) {
-		width: 174px;
+			width: 174px;
 		}
 	}
 }
