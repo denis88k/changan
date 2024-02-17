@@ -93,22 +93,6 @@
 		cursor: pointer;
 		@include adaptiv-value(font-size, 20, 18, 1);
 
-		&::after {
-			content: '';
-			position: absolute;
-			width: 22px;
-			height: 22px;
-
-			// width: 6.79px;
-			// height: 11px;
-			background-image: url('./../img/arrow_right_white.png');
-			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
-
-			// transform: translate(200%, 50%);
-		}
-
 		&:hover {
 			background-color: var(--hover);
 		}

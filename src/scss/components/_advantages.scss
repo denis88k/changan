@@ -27,6 +27,10 @@
 		@media screen and (max-width: 1105px) {
 			padding: 10px 11px 10px 9px;
 		}
+
+		@media screen and (max-width: 900px) {
+			height: 123px;
+		}
 	}
 
 	&__block-icon {

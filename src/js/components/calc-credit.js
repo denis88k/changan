@@ -1,22 +1,7 @@
-import { toggleClass } from './helpers.js';
-import modal from './modal.js';
-
-modal('.details-terms__btn', '.modal-credit', '.modal-credit .modal__close');
-
-const creditCheck = document.querySelectorAll('.modal-credit__check-item');
-
-creditCheck.forEach(check => {
-	check.addEventListener('click', () => {
-		const creditCheckInput = check.querySelector('.modal-credit__check-input');
-
-		toggleClass(creditCheckInput, 'modal-credit__check-input-active');
-	});
-});
-
 const rangeSliders = document.querySelectorAll('.range-slider');
 
-let mainColor = '#EAEAEA';
-const rangeColor = '#EB1D24';
+let mainColor = '#d5d5d5';
+const rangeColor = '#435dff';
 
 if (window.innerWidth <= 825) {
 	mainColor = 'transparent';
@@ -92,7 +77,7 @@ const creditTermRange = () => {
 	});
 };
 
-// вызов
-NOTE: firstPayRange(); // первоначальный платёж
+// NOTE: вызов функций
+firstPayRange(); // первоначальный платёж
 creditTermRange(); // срок кредитования
 monthPayCalc(); // ежемесячный платёж

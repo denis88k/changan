@@ -1,28 +1,15 @@
 .bank-partner {
-	margin-top: 80px;
-	margin-bottom: 60px;
+	margin-top: 35px;
+	margin-bottom: 95px;
+
+	@media screen and (max-width: 500px) {
+		margin-top: 15px;
+		margin-bottom: 53px;
+	}
 
 	&__inner {
 		display: flex;
 		flex-direction: column;
-		border-radius: 20px;
-
-		@media screen and (max-width: 500px) {
-			padding-right: 0;
-			padding-left: 0;
-			box-shadow: none;
-		}
-
-		@media screen and (max-width: 400px) {
-			position: relative;
-			left: 50%;
-			width: 100vw;
-			transform: translateX(-50%);
-		}
-	}
-
-	&__title {
-		margin-left: 15px;
 	}
 
 	&__banks {
@@ -48,24 +35,5 @@
 		box-shadow: 0 3.256px 13.187px 0 rgba(0, 0, 0, 0.09);
 		background-color: var(--white);
 		cursor: pointer;
-	}
-
-	&__btn-show {
-		display: none;
-		@media screen and (max-width: 688px) {
-			display: flex;
-			justify-content: center;
-			padding: 22px 0;
-			background-color: var(--btn-bkg);
-			cursor: pointer;
-		}
-	}
-
-	&__btn-show__text {
-		margin-right: 5px;
-		font-weight: 500;
-		font-size: 15px;
-		line-height: 130%;
-		color: var(--red);
 	}
 }

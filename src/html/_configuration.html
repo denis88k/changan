@@ -8,13 +8,18 @@
           Подберите комплектацию из моделей в наличии
         </h3>
 
-        <div class="configuration__top-select">
-          <div class="configuration__top-input">Выберите модель</div>
+        <div class="configuration__top-input-select input-select">
+          <div class="configuration__top-input-select-text input-select__text">
+            <span class='input-select__text-inner'>Выберите модель</span>
+            <svg class='configuration__top-input-select__icon input-select__icon'>
+              <use href="img/sprite.svg#arrow-down"></use>
+            </svg>
+          </div>
 
-          <ul class='configuration__top-select'>
-            <li class="configuration__top-option option">ALSVIN 1</li>
-            <li class="configuration__top-option option">ALSVIN 2</li>
-            <li class="configuration__top-option option">ALSVIN 3</li>
+          <ul class='configuration__top-select input-select__options'>
+            <li class="configuration__top-option input-select__option">ALSVIN 1</li>
+            <li class="configuration__top-option input-select__option">ALSVIN 2</li>
+            <li class="configuration__top-option input-select__option">ALSVIN 3</li>
           </ul>
 
         </div>
@@ -335,7 +340,6 @@
       </div>
     </div>
   </div>
-
 
   <div class="configuration__list-btn-container container">
     <button class='configuration__list-btn list-cars__btn'>

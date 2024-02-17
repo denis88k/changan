@@ -59,6 +59,10 @@
 		max-width: 335px;
 	}
 
+	@media screen and (max-width: 720px) {
+		height: auto;
+	}
+
 	&__text {
 		margin-top: 20px;
 		margin-bottom: 25px;
@@ -180,6 +184,10 @@
 		padding: 20px 29px;
 		height: auto;
 		max-width: 335px;
+	}
+	
+	@media screen and (max-width: 720px) {
+		height: auto;
 	}
 
 	&__advans {

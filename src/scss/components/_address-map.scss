@@ -3,6 +3,10 @@
 		display: flex;
 		justify-content: space-between;
 		gap: 10px;
+		@media screen and (max-width: 900px) {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 
 	&__address {
@@ -29,6 +33,10 @@
 		font-size: 35px;
 		line-height: 120%;
 		color: var(--black);
+
+		@media screen and (max-width: 900px) {
+			font-size: 22px;
+		}
 	}
 
 	&__address-data {
@@ -42,12 +50,20 @@
 		font-weight: 500;
 		font-size: 16px;
 		color: var(--grey);
+
+		@media screen and (max-width: 900px) {
+			font-size: 12px;
+		}
 	}
 
 	&__address-data-text {
 		font-weight: 700;
 		font-size: 20px;
 		color: var(--blue);
+
+		@media screen and (max-width: 900px) {
+			font-size: 16px;
+		}
 	}
 
 	// bottom
@@ -58,7 +74,6 @@
 
 		@media screen and (max-width: 900px) {
 			padding: 0 21px 16px;
-			
 		}
 	}
 
@@ -67,6 +82,10 @@
 		font-size: 20px;
 		line-height: 120%;
 		color: var(--black);
+
+		@media screen and (max-width: 900px) {
+			font-size: 16px;
+		}
 	}
 
 	&__address-form {
@@ -127,12 +146,14 @@
 		@media screen and (max-width: 900px) {
 			height: 46px;
 			max-width: 100%;
+			font-size: 12px;
 		}
 	}
 
 	&__check-item {
 		display: flex;
 		align-items: center;
+		cursor: pointer;
 
 		@media screen and (max-width: 900px) {
 			align-self: center;
@@ -148,11 +169,14 @@
 		border-radius: 4px;
 		width: 16px;
 		height: 16px;
-		opacity: 0;
-		visibility: hidden;
-		transition: opacity 0.3s ease;
 
-		&.address-map__check-input-active{
+		svg{
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity 0.3s linear;
+		}
+
+		&.address-map__check-input-active svg{
 			opacity: 1;
 			visibility: visible;
 		}
@@ -178,7 +202,7 @@
 	height: 441px;
 	max-width: 816px;
 
-	@media screen and (max-width: 900px) {
+	@media screen and (max-width: 800px) {
 		height: 190px;
 	}
 }
