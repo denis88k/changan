@@ -1742,62 +1742,61 @@ body._lock {
     font-size: 12px;
   }
 }
-.trade-in__form.form {
+.trade-in__form {
   display: flex;
 }
 @media screen and (max-width: 900px) {
-  .trade-in__form.form {
+  .trade-in__form {
     flex-direction: column;
   }
 }
-.trade-in__form.form .form__item {
+.trade-in .form__item {
   margin-right: 11px;
   width: 100%;
+  height: 66px;
+  max-width: 305px;
 }
 @media screen and (max-width: 900px) {
-  .trade-in__form.form .form__item {
+  .trade-in .form__item {
     margin-right: 0;
     margin-bottom: 10px;
   }
 }
-.trade-in__form.form .form__input {
+.trade-in .form__input {
   border: 1px solid #d8d8d8;
   border-radius: 100px;
+  padding: 21px 20px;
   padding-top: 21px;
-  padding-bottom: 21px;
-  padding-left: 20px;
   width: 100%;
-  height: 66px;
-  max-width: 305px;
   font-weight: 500;
   font-size: 16px;
   color: var(--black);
   background: #f7f7f7;
 }
-.trade-in__form.form .form__input::placeholder {
+.trade-in .form__input::placeholder {
   font-weight: 500;
   font-size: 16px;
   color: var(--grey);
 }
 @media screen and (max-width: 900px) {
-  .trade-in__form.form .form__input::placeholder {
+  .trade-in .form__input::placeholder {
     font-size: 12px;
   }
 }
 @media screen and (max-width: 900px) {
-  .trade-in__form.form .form__input {
+  .trade-in .form__input {
     height: 46px;
     max-width: 294px;
   }
 }
-.trade-in__form.form .form__item-btn {
+.trade-in .form__item-btn {
   border-radius: 1000px;
   width: 100%;
   height: 66px;
   max-width: 306px;
 }
 @media screen and (max-width: 900px) {
-  .trade-in__form.form .form__item-btn {
+  .trade-in .form__item-btn {
     height: 40px;
     max-width: 294px;
     font-size: 12px;
@@ -1951,115 +1950,173 @@ body._lock {
   }
 }
 
-.map-details__inner {
-  position: relative;
+.address-map__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
 }
-.map-details__title {
-  margin-bottom: 30px;
-}
-@media screen and (max-width: 1075px) {
-  .map-details__title {
-    margin-bottom: 15px;
-  }
-}
-.map-details__address {
-  position: absolute;
-  right: 25px;
-  bottom: 27px;
-  z-index: 5;
+.address-map__address {
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
-  padding: 25px;
+  border-radius: 30px;
   width: 100%;
-  max-width: 472px;
-  box-shadow: 0 4px 16.2px 0 rgba(0, 0, 0, 0.09);
-  background-color: var(--white);
+  max-width: 580px;
+  background: #f7f7f7;
 }
-@media screen and (max-width: 1075px) {
-  .map-details__address {
-    position: relative;
-    left: 50%;
-    right: auto;
-    bottom: auto;
-    margin-bottom: 20px;
-    padding: 15px;
-    width: 100vw;
-    transform: translateX(-50%);
+.address-map__address-contact {
+  border-bottom: 1px solid #d9d9d9;
+  padding: 35px 22px 30px 40px;
+}
+@media screen and (max-width: 900px) {
+  .address-map__address-contact {
+    border-bottom: none;
+    padding: 25px 21px 20px;
   }
 }
-.map-details__address-data {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  padding: 15px 23px;
-  box-shadow: 0 4px 16.2px 0 rgba(0, 0, 0, 0.09);
-  background-color: var(--white);
+.address-map__address-contact-title {
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 120%;
+  color: var(--black);
 }
-@media screen and (max-width: 998px) {
-  .map-details__address-data {
-    padding: 12px 18px;
-  }
-}
-.map-details__address-data__info {
+.address-map__address-data {
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
+  margin-top: 15px;
 }
-.map-details__address-data__info-title {
-  font-weight: 600;
-  font-size: 19px;
-  line-height: 175%;
-  color: var(--text-black);
+.address-map__address-data-subtitle {
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--grey);
 }
-@media screen and (max-width: 998px) {
-  .map-details__address-data__info-title {
-    font-size: 16px;
+.address-map__address-data-text {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--blue);
+}
+.address-map__address-bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 17px 25px 40px;
+}
+@media screen and (max-width: 900px) {
+  .address-map__address-bottom {
+    padding: 0 21px 16px;
   }
 }
-.map-details__address-data__info-subtitle {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 175%;
-  color: var(--text-grey);
+.address-map__address-bottom-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--black);
 }
-@media screen and (max-width: 998px) {
-  .map-details__address-data__info-subtitle {
+.address-map__address-form {
+  display: flex;
+  column-gap: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: -20px;
+}
+@media screen and (max-width: 900px) {
+  .address-map__address-form {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 0;
+    row-gap: 10px;
+  }
+}
+.address-map .form__item {
+  width: 100%;
+  height: 69px;
+  max-width: 267px;
+}
+@media screen and (max-width: 900px) {
+  .address-map .form__item {
+    height: 46px;
+    max-width: 100%;
+  }
+}
+.address-map .form__input {
+  border: 1px solid #d8d8d8;
+  border-radius: 100px;
+  padding: 22px 20px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--black);
+  background-color: var(--white);
+}
+@media screen and (max-width: 900px) {
+  .address-map .form__input {
+    padding: 14px 15px;
     font-size: 12px;
   }
 }
-.map-details .update-car {
-  margin-top: 10px;
-  margin-bottom: 20px;
+.address-map .form__input::placeholder {
+  color: var(--grey);
 }
-@media screen and (max-width: 998px) {
-  .map-details .update-car {
-    margin-bottom: 14px;
+.address-map__address-btn {
+  border-radius: 1000px;
+  width: 100%;
+  height: 69px;
+  max-width: 270px;
+}
+@media screen and (max-width: 900px) {
+  .address-map__address-btn {
+    height: 46px;
+    max-width: 100%;
   }
 }
-.map-details__address-btn {
-  border-radius: 10px;
-  padding: 30px 0;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 150%;
-  text-align: center;
+.address-map__check-item {
+  display: flex;
+  align-items: center;
 }
-@media screen and (max-width: 998px) {
-  .map-details__address-btn {
-    padding: 23px 0;
+@media screen and (max-width: 900px) {
+  .address-map__check-item {
+    align-self: center;
+  }
+}
+.address-map__check-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  border: 1px solid var(--blue);
+  border-radius: 4px;
+  width: 16px;
+  height: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+.address-map__check-input.address-map__check-input-active {
+  opacity: 1;
+  visibility: visible;
+}
+.address-map__check-text {
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--grey);
+}
+@media screen and (max-width: 900px) {
+  .address-map__check-text {
+    font-size: 10px;
+    text-align: center;
   }
 }
 
 .map {
   overflow: hidden;
-  border-radius: 15px;
-  height: 542px;
+  border-radius: 30px;
+  width: 100%;
+  height: 441px;
+  max-width: 816px;
 }
-@media screen and (max-width: 998px) {
+@media screen and (max-width: 900px) {
   .map {
-    height: 360px;
+    height: 190px;
   }
 }
 

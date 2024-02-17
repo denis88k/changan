@@ -1023,7 +1023,56 @@
 </div>
 
 		<!-- map -->
-		
+		<section class='address-map'>
+  <div class="container">
+    <div class="address-map__inner">
+
+      <div class="address-map__address">
+
+        <div class="address-map__address-contact">
+          <div class="address-map__address-contact-title">
+            Контакты
+          </div>
+          <div class="address-map__address-data">
+            <p class="address-map__address-data-subtitle">Адрес:</p>
+            <p class="address-map__address-data-text">Москва, ул. Одинцова, 54</p>
+          </div>
+          <div class="address-map__address-data">
+            <p class="address-map__address-data-subtitle">Телефон:</p>
+            <a class="address-map__address-data-text" href="tel:+73834567890">+7 (383) 456-78-90</a>
+          </div>
+        </div>
+
+        <div class="address-map__address-bottom">
+          <div class="address-map__address-bottom-title">Остались вопросы?</div>
+
+          <form class="address-map__address-form form">
+            <div class="form__item">
+              <input class="form__input input__tel" type="tel" name="Телефон" placeholder="Номер телефона" />
+            </div>
+            <button class="address-map__address-btn btn">
+              Заказать звонок
+            </button>
+          </form>
+
+          <div class="address-map__check-item">
+            <div class="address-map__check-input address-map__check-input-active">
+              <svg width="12" height="8">
+                <use href="img/sprite.svg#check"></use>
+              </svg>
+            </div>
+            <p class="address-map__check-text">
+              Я согласен на обработку персональных данных.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="map" id='map' />
+    </div>
+  </div>
+</section>
 
 		<!-- footer -->
 		<footer class='footer'>
@@ -1136,29 +1185,29 @@
   yandexiniti();
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
 <script>
   // слайдер для карточки авто
-  const cardSlider = document.querySelector('.card__swiper');
-  const cardSliderMini = document.querySelector('.card__swiper-mini');
+  // const cardSlider = document.querySelector('.card__swiper');
+  // const cardSliderMini = document.querySelector('.card__swiper-mini');
 
-  let swiperCardMini = new Swiper(cardSliderMini, {
-    slidesPerView: 'auto',
-    spaceBetween: 1,
-  });
+  // let swiperCardMini = new Swiper(cardSliderMini, {
+  //   slidesPerView: 'auto',
+  //   spaceBetween: 1,
+  // });
 
-  let swiperCard = new Swiper(cardSlider, {
-    centeredSlides: true,
-    slidesPerView: '1',
-    effect: 'fade',
-    thumbs: {
-      swiper: swiperCardMini,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
+  // let swiperCard = new Swiper(cardSlider, {
+  //   centeredSlides: true,
+  //   slidesPerView: '1',
+  //   effect: 'fade',
+  //   thumbs: {
+  //     swiper: swiperCardMini,
+  //   },
+  //   navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  //   },
+  // });
 
   // слайдер для карточки с похожими авто similar car
   // const cardBasic = document.querySelector('.similar_car__card-basic');
@@ -1182,46 +1231,46 @@
   // });
 
   // похожие авто - слайдер
-  const choiceCarSwipers = document.querySelectorAll(".choice-car__swiper");
+  // const choiceCarSwipers = document.querySelectorAll(".choice-car__swiper");
 
-  if (choiceCarSwipers) {
-    choiceCarSwipers.forEach((slider) => {
-      const slides = slider.querySelectorAll(".choice-car__slide"); // кол-во слайдов
-      const pagination = slider.querySelector(".choice-car__pagination");
+  // if (choiceCarSwipers) {
+  //   choiceCarSwipers.forEach((slider) => {
+  //     const slides = slider.querySelectorAll(".choice-car__slide"); // кол-во слайдов
+  //     const pagination = slider.querySelector(".choice-car__pagination");
 
-      if (slides.length > 1) {
-        slides.forEach((slide, slideIndex) => {
-          const span =
-            slideIndex === 0
-              ? '<span class="choice-car__bullet bullet_hover"></span>'
-              : '<span class="choice-car__bullet"></span>';
-          pagination.insertAdjacentHTML("beforeend", span);
+  //     if (slides.length > 1) {
+  //       slides.forEach((slide, slideIndex) => {
+  //         const span =
+  //           slideIndex === 0
+  //             ? '<span class="choice-car__bullet bullet_hover"></span>'
+  //             : '<span class="choice-car__bullet"></span>';
+  //         pagination.insertAdjacentHTML("beforeend", span);
 
-          slide.addEventListener("mouseenter", () => {
-            pagination
-              .querySelectorAll(".choice-car__bullet")
-              .forEach((bullet, bulletIndex) => {
-                bullet.classList.remove("bullet_hover");
-                if (slideIndex === bulletIndex) {
-                  bullet.classList.add("bullet_hover");
-                }
-              });
-          });
+  //         slide.addEventListener("mouseenter", () => {
+  //           pagination
+  //             .querySelectorAll(".choice-car__bullet")
+  //             .forEach((bullet, bulletIndex) => {
+  //               bullet.classList.remove("bullet_hover");
+  //               if (slideIndex === bulletIndex) {
+  //                 bullet.classList.add("bullet_hover");
+  //               }
+  //             });
+  //         });
 
-          slide.addEventListener("mouseleave", () => {
-            pagination
-              .querySelectorAll(".choice-car__bullet")
-              .forEach((bullet, bulletIndex) => {
-                bullet.classList.remove("bullet_hover");
-                if (bulletIndex === 0) {
-                  bullet.classList.add("bullet_hover");
-                }
-              });
-          });
-        });
-      }
-    });
-  }
+  //         slide.addEventListener("mouseleave", () => {
+  //           pagination
+  //             .querySelectorAll(".choice-car__bullet")
+  //             .forEach((bullet, bulletIndex) => {
+  //               bullet.classList.remove("bullet_hover");
+  //               if (bulletIndex === 0) {
+  //                 bullet.classList.add("bullet_hover");
+  //               }
+  //             });
+  //         });
+  //       });
+  //     }
+  //   });
+  // }
 
 </script>
 <script src="js/main.min.js"></script>

@@ -1,109 +1,185 @@
-.map-details {
+.address-map {
 	&__inner {
-		position: relative;
-	}
-
-	&__title {
-		margin-bottom: 30px;
-		@media screen and (max-width: 1075px) {
-			margin-bottom: 15px;
-		}
+		display: flex;
+		justify-content: space-between;
+		gap: 10px;
 	}
 
 	&__address {
-		position: absolute;
-		right: 25px;
-		bottom: 27px;
-		z-index: 5;
 		display: flex;
 		flex-direction: column;
-		border-radius: 20px;
-		padding: 25px;
+		border-radius: 30px;
 		width: 100%;
-		max-width: 472px;
-		box-shadow: 0 4px 16.2px 0 rgba(0, 0, 0, 0.09);
-		background-color: var(--white);
+		max-width: 580px;
+		background: #f7f7f7;
+	}
 
-		@media screen and (max-width: 1075px) {
-			position: relative;
-			left: 50%;
-			right: auto;
-			bottom: auto;
-			margin-bottom: 20px;
-			padding: 15px;
-			width: 100vw;
-			transform: translateX(-50%);
+	&__address-contact {
+		border-bottom: 1px solid  #d9d9d9;
+		padding: 35px 22px 30px 40px;
+
+		@media screen and (max-width: 900px) {
+			border-bottom: none;
+			padding: 25px 21px 20px;
 		}
+	}
+
+	&__address-contact-title {
+		font-weight: 600;
+		font-size: 35px;
+		line-height: 120%;
+		color: var(--black);
 	}
 
 	&__address-data {
 		display: flex;
-		align-items: center;
-		margin-bottom: 10px;
-		border-radius: 10px;
-		padding: 15px 23px;
-		box-shadow: 0 4px 16.2px 0 rgba(0, 0, 0, 0.09);
-		background-color: var(--white);
-		@media screen and (max-width: 998px) {
-			padding: 12px 18px;
-		}
+		flex-direction: column;
+		margin-top: 15px;
 	}
 
-	&__address-data__info {
+	&__address-data-subtitle {
+		margin-bottom: 5px;
+		font-weight: 500;
+		font-size: 16px;
+		color: var(--grey);
+	}
+
+	&__address-data-text {
+		font-weight: 700;
+		font-size: 20px;
+		color: var(--blue);
+	}
+
+	// bottom
+	&__address-bottom{
 		display: flex;
 		flex-direction: column;
-		margin-left: 20px;
+		padding: 20px 17px 25px 40px;
+
+		@media screen and (max-width: 900px) {
+			padding: 0 21px 16px;
+			
+		}
 	}
 
-	&__address-data__info-title {
+	&__address-bottom-title {
 		font-weight: 600;
-		font-size: 19px;
-		line-height: 175%;
-		color: var(--text-black);
-		@media screen and (max-width: 998px) {
+		font-size: 20px;
+		line-height: 120%;
+		color: var(--black);
+	}
+
+	&__address-form {
+		display: flex;
+		column-gap: 5px;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		margin-left: -20px;
+
+		@media screen and (max-width: 900px) {
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 10px;
+			margin-left: 0;
+			row-gap: 10px;
+		}
+	}
+
+	.form {
+		&__item {
+			width: 100%;
+			height: 69px;
+			max-width: 267px;
+
+			@media screen and (max-width: 900px) {
+				height: 46px;
+				max-width: 100%;
+			}
+		}
+	
+		&__input {
+			border: 1px solid #d8d8d8;
+			border-radius: 100px;
+			padding: 22px 20px;
+			width: 100%;
+			font-weight: 500;
 			font-size: 16px;
-		}
-	}
+			color: var(--black);
+			background-color: var(--white);
 
-	&__address-data__info-subtitle {
-		font-weight: 400;
-		font-size: 14px;
-		line-height: 175%;
-		color: var(--text-grey);
-		@media screen and (max-width: 998px) {
-			font-size: 12px;
-		}
-	}
+			@media screen and (max-width: 900px) {
+				padding: 14px 15px;
+				font-size: 12px;
+			}
 
-	.update-car {
-		margin-top: 10px;
-		margin-bottom: 20px;
-		@media screen and (max-width: 998px) {
-			margin-bottom: 14px;
+			&::placeholder{
+				color: var(--grey);
+			}
 		}
 	}
 
 	&__address-btn {
-		border-radius: 10px;
-		padding: 30px 0;
-		font-weight: 600;
-		font-size: 18px;
-		line-height: 150%;
-		text-align: center;
-		@media screen and (max-width: 998px) {
-			padding: 23px 0;
+		border-radius: 1000px;
+		width: 100%;
+		height: 69px;
+		max-width: 270px;
+
+		@media screen and (max-width: 900px) {
+			height: 46px;
+			max-width: 100%;
+		}
+	}
+
+	&__check-item {
+		display: flex;
+		align-items: center;
+
+		@media screen and (max-width: 900px) {
+			align-self: center;
+		}
+	}
+
+	&__check-input {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 10px;
+		border: 1px solid var(--blue);
+		border-radius: 4px;
+		width: 16px;
+		height: 16px;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease;
+
+		&.address-map__check-input-active{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__check-text {
+		font-weight: 500;
+		font-size: 12px;
+		color: var(--grey);
+		
+
+		@media screen and (max-width: 900px) {
+			font-size: 10px;
+			text-align: center;
 		}
 	}
 }
 
 .map {
 	overflow: hidden;
-	border-radius: 15px;
-	height: 542px;
+	border-radius: 30px;
+	width: 100%;
+	height: 441px;
+	max-width: 816px;
 
-	// height: 360px; mobile
-	@media screen and (max-width: 998px) {
-		height: 360px;
+	@media screen and (max-width: 900px) {
+		height: 190px;
 	}
 }
 

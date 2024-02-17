@@ -60,29 +60,29 @@
   yandexiniti();
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
 <script>
   // слайдер для карточки авто
-  const cardSlider = document.querySelector('.card__swiper');
-  const cardSliderMini = document.querySelector('.card__swiper-mini');
+  // const cardSlider = document.querySelector('.card__swiper');
+  // const cardSliderMini = document.querySelector('.card__swiper-mini');
 
-  let swiperCardMini = new Swiper(cardSliderMini, {
-    slidesPerView: 'auto',
-    spaceBetween: 1,
-  });
+  // let swiperCardMini = new Swiper(cardSliderMini, {
+  //   slidesPerView: 'auto',
+  //   spaceBetween: 1,
+  // });
 
-  let swiperCard = new Swiper(cardSlider, {
-    centeredSlides: true,
-    slidesPerView: '1',
-    effect: 'fade',
-    thumbs: {
-      swiper: swiperCardMini,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
+  // let swiperCard = new Swiper(cardSlider, {
+  //   centeredSlides: true,
+  //   slidesPerView: '1',
+  //   effect: 'fade',
+  //   thumbs: {
+  //     swiper: swiperCardMini,
+  //   },
+  //   navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  //   },
+  // });
 
   // слайдер для карточки с похожими авто similar car
   // const cardBasic = document.querySelector('.similar_car__card-basic');
@@ -106,46 +106,46 @@
   // });
 
   // похожие авто - слайдер
-  const choiceCarSwipers = document.querySelectorAll(".choice-car__swiper");
+  // const choiceCarSwipers = document.querySelectorAll(".choice-car__swiper");
 
-  if (choiceCarSwipers) {
-    choiceCarSwipers.forEach((slider) => {
-      const slides = slider.querySelectorAll(".choice-car__slide"); // кол-во слайдов
-      const pagination = slider.querySelector(".choice-car__pagination");
+  // if (choiceCarSwipers) {
+  //   choiceCarSwipers.forEach((slider) => {
+  //     const slides = slider.querySelectorAll(".choice-car__slide"); // кол-во слайдов
+  //     const pagination = slider.querySelector(".choice-car__pagination");
 
-      if (slides.length > 1) {
-        slides.forEach((slide, slideIndex) => {
-          const span =
-            slideIndex === 0
-              ? '<span class="choice-car__bullet bullet_hover"></span>'
-              : '<span class="choice-car__bullet"></span>';
-          pagination.insertAdjacentHTML("beforeend", span);
+  //     if (slides.length > 1) {
+  //       slides.forEach((slide, slideIndex) => {
+  //         const span =
+  //           slideIndex === 0
+  //             ? '<span class="choice-car__bullet bullet_hover"></span>'
+  //             : '<span class="choice-car__bullet"></span>';
+  //         pagination.insertAdjacentHTML("beforeend", span);
 
-          slide.addEventListener("mouseenter", () => {
-            pagination
-              .querySelectorAll(".choice-car__bullet")
-              .forEach((bullet, bulletIndex) => {
-                bullet.classList.remove("bullet_hover");
-                if (slideIndex === bulletIndex) {
-                  bullet.classList.add("bullet_hover");
-                }
-              });
-          });
+  //         slide.addEventListener("mouseenter", () => {
+  //           pagination
+  //             .querySelectorAll(".choice-car__bullet")
+  //             .forEach((bullet, bulletIndex) => {
+  //               bullet.classList.remove("bullet_hover");
+  //               if (slideIndex === bulletIndex) {
+  //                 bullet.classList.add("bullet_hover");
+  //               }
+  //             });
+  //         });
 
-          slide.addEventListener("mouseleave", () => {
-            pagination
-              .querySelectorAll(".choice-car__bullet")
-              .forEach((bullet, bulletIndex) => {
-                bullet.classList.remove("bullet_hover");
-                if (bulletIndex === 0) {
-                  bullet.classList.add("bullet_hover");
-                }
-              });
-          });
-        });
-      }
-    });
-  }
+  //         slide.addEventListener("mouseleave", () => {
+  //           pagination
+  //             .querySelectorAll(".choice-car__bullet")
+  //             .forEach((bullet, bulletIndex) => {
+  //               bullet.classList.remove("bullet_hover");
+  //               if (bulletIndex === 0) {
+  //                 bullet.classList.add("bullet_hover");
+  //               }
+  //             });
+  //         });
+  //       });
+  //     }
+  //   });
+  // }
 
 </script>
 <script src="js/main.min.js"></script>
