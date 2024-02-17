@@ -277,15 +277,15 @@
 			gap: 12px;
 		}
 
-		& .input__name+.just-validate-error-label{
-			display: none;
-		}
+		// & .input__name+.just-validate-error-label{
+		// 	display: none;
+		// }
 
-		& .form__item{
-			@media screen and (max-width: 1335px) {
-				// align-self: center;
-			}
-		}
+		// & .form__item{
+		// 	@media screen and (max-width: 1335px) {
+		// 		// align-self: center;
+		// 	}
+		// }
 
 		& .form__input{
 			border: none;
