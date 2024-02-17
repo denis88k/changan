@@ -53,6 +53,7 @@
 	&__info-address,
 	&__info-phone{
 		@include f-c-c;
+		cursor: pointer;
 	}
 
 	&__info {
@@ -96,7 +97,6 @@
 	&__info-phone {
 		.header__info-text{
 			font-weight: 600;
-			cursor: pointer;
 		}
 
 		@media screen and (max-width: 600px) {
@@ -123,11 +123,6 @@
 		border-radius: 25px;
 		width: 234px;
 		height: 51px;
-		font-weight: 600;
-		font-size: 18px;
-		text-align: center;
-		color: var(--white);
-		background: var(--blue);
 
 		@media screen and (max-width: 600px) {
 			display: none;

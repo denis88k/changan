@@ -24,6 +24,17 @@
 	&__list {
 	}
 
+	&__list-inner {
+		display: flex;
+		flex-direction: column;
+		margin-top: 20px;
+		margin-bottom: 35px;
+
+		@media screen and (max-width: 900px) {
+			margin-bottom: 30px;
+		}
+	}
+
 	&__list-border {
 		border-top: 1px solid #d9d9d9;
 		border-bottom: 1px solid #d9d9d9;
@@ -34,39 +45,57 @@
 		font-size: 24px;
 		line-height: 170%;
 		color: var(--black);
+
+		@media screen and (max-width: 900px) {
+			font-size: 20px;
+		}
 	}
 
 	&__list-count {
+		margin-bottom: 25px;
 		font-weight: 400;
 		font-size: 16px;
 		color: #7b7b7b;
+
+		@media screen and (max-width: 900px) {
+			margin-bottom: 20px;
+			font-size: 12px;
+		}
 	}
 
 	&__lists {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		align-self: center;
 		gap: 20px;
+
+		@media screen and (max-width: 1450px) {
+			justify-content: center;
+		}
 	}
 
 	&__lists-item {
 		border: 1px solid #f0f0f0;
 		border-radius: 20px;
+		width: 100%;
+		max-width: 460px;
 		background-color: #f4f4f4;
-
-		// width: 460px;
-		// height: 200px;
 	}
 
 	&__lists-top {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		border-bottom: 1px solid #d9d9d9;
-		padding: 20px;
+		padding: 20px 20px 11px;
+
+		@media screen and (max-width: 900px) {
+			padding: 5px 5px 11px 15px;
+		}
 	}
 
-	&__lists-info {
-	}
+	// &__lists-info {
+	// }
 
 	&__lists-model {
 		font-weight: 600;
@@ -74,40 +103,68 @@
 		line-height: 120%;
 		text-transform: uppercase;
 		color: var(--black);
+
+		@media screen and (max-width: 900px) {
+			font-size: 20px;
+		}
 	}
 
 	&__lists-data {
+		margin-top: 5px;
 		font-weight: 400;
-		font-size: 15px;
+		font-size: 15.3px;
 		line-height: 140%;
 		color: #7b7b7b;
+
+		@media screen and (max-width: 900px) {
+			font-size: 12px;
+		}
 	}
 
 	&__lists-img {
-		width: 139px;
+		width: 138px;
 		height: 74px;
+
+		@media screen and (max-width: 900px) {
+			width: 109px;
+			height: 58px;
+		}
 	}
 
 	&__lists-bottom {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		padding: 20px;
+
+		@media screen and (max-width: 900px) {
+			padding: 10px 15px;
+		}
 	}
 
-	&__lists-price-month {
-	}
+	// &__lists-price-month {
+	// }
 
 	&__lists-price {
 		font-weight: 600;
 		font-size: 24px;
 		line-height: 120%;
 		color: var(--blue);
+
+		@media screen and (max-width: 900px) {
+			font-size: 20px;
+		}
 	}
 
 	&__lists-month {
 		font-weight: 400;
 		font-size: 15px;
 		color: #7b7b7b;
+
+		@media screen and (max-width: 900px) {
+			font-weight: 500;
+			font-size: 12px;
+		}
 	}
 
 	&__lists-btn {
@@ -115,13 +172,23 @@
 		width: 100%;
 		height: 54px;
 		max-width: 237px;
-	}
-  &__list-btn{
-    width: 100%;
-  }
-}
 
-.list-cars {
-	&__btn {
+		@media screen and (max-width: 900px) {
+			height: 34px;
+			max-width: 143px;
+			font-size: 12px;
+		}
 	}
+
+	&__list-btn-container{
+		width: 100%;
+	}
+
+	// &__list-btn{
+	// 	margin-top: 30px;
+
+	// 	@media screen and (max-width: 900px) {
+	// 		margin-top: 15px;
+	// 	}
+	// }
 }
