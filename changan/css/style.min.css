@@ -1886,7 +1886,7 @@ body._lock {
   margin-top: 35px;
   margin-bottom: 95px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
   .bank-partner {
     margin-top: 15px;
     margin-bottom: 53px;
@@ -1931,6 +1931,15 @@ body._lock {
 @media screen and (max-width: 500px) {
   .bank-partner__bank {
     width: 174px;
+  }
+}
+.bank-partner__btn-show {
+  display: none;
+}
+@media screen and (max-width: 688px) {
+  .bank-partner__btn-show {
+    display: flex;
+    margin-top: 25px;
   }
 }
 
