@@ -1,5 +1,10 @@
 /* stylelint-disable no-descending-specificity */
 .header {
+	.container{
+		padding: 0 calc(20px / 2);
+		max-width: 1440px;
+	}
+
 	&__inner {
 		@include f-spb-c;
 		padding: 20px 0 30px;
@@ -40,7 +45,7 @@
 				width: 100%;
 				max-width: 195px;
 				font-weight: 500;
-				font-size: 14px;
+				font-size: 14.5px;
 				color: var(--grey);
 
 				@media screen and (max-width: 600px) {
@@ -87,11 +92,20 @@
 		height: 40px;
 		background-color: #f7f7f7;
 		@include f-c-c;
+
+		@media screen and (max-width: 880px) {
+			width: 17.5px;
+			height: 17.5px;
+		}
 	}
 
 	&__info-text {
 		font-size: 16px;
 		color: var(--black);
+
+		@media screen and (max-width: 880px) {
+			padding: 8.5px 0;
+		}
 	}
 
 	&__info-phone {

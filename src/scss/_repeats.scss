@@ -1,12 +1,12 @@
-.title {
-	font-weight: 700;
-	font-size: 28px;
-	line-height: 130%;
-	color: var(--text-black);
-	@media screen and (max-width: 798px) {
-		font-size: 20px;
-	}
-}
+// .title {
+// 	font-weight: 700;
+// 	font-size: 28px;
+// 	line-height: 130%;
+// 	color: var(--text-black);
+// 	@media screen and (max-width: 798px) {
+// 		font-size: 20px;
+// 	}
+// }
 
 .btn {
 	font-weight: 600;
@@ -37,7 +37,7 @@
 .input-select{
 	position: relative;
 	width: 100%;
-	max-width: 286px;
+	max-width: 289px;
 
 	@media screen and (max-width: 500px) {
 		min-width: 100%;
@@ -49,19 +49,19 @@
 		justify-content: space-between;
 		border: 1px solid #f4f4f4;
 		border-radius: 49px;
-		padding: 21px 25px 21px 20px;
+		padding: 18px 25px 18px 20px;
 		background: #f4f4f4;
 		transition: all 0.3s ease-in-out;
 		cursor: pointer;
 		
 		@media screen and (max-width: 500px) {
-			padding: 8px 16px 8px 15px;
+			padding: 6px 16px 7px 15px;
 		}
 	}
 
 	&__text-inner{
 		font-weight: 500;
-		font-size: 16px;
+		font-size: 17px;
 		color: var(--black);
 	
 		@media screen and (max-width: 900px) {

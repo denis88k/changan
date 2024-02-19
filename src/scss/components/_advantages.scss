@@ -42,6 +42,10 @@
 		width: 50px;
 		height: 50px;
 		background: #f7f7f7;
+
+		@media screen and (max-width: 900px) {
+			margin-bottom: 5px;
+		}
 	}
 
 	&__block-text {
@@ -52,7 +56,9 @@
 		color: var(--black);
 
 		@media screen and (max-width: 1105px) {
-			font-size: 16px;
+			font-size: 16.5px;
+		line-height: 145%;
+
 		}
 	}
 }
