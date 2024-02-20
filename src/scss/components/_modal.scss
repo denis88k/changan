@@ -82,13 +82,13 @@
 	
 			&__title {
 				font-weight: 500;
-				font-size: 38px;
+				font-size: 43px;
 				line-height: 110%;
 				text-align: center;
 				color: var(--black);
 
 				@media screen and (max-width: 540px) {
-					font-size: 20px;
+					font-size: 28px;
 				}
 			}
 	
@@ -102,7 +102,8 @@
 				color: var(--grey);
 
 				@media screen and (max-width: 540px) {
-					font-size: 15px;
+					margin-bottom: 30px;
+					font-size: 17px;
 				}
 			}
 		}
