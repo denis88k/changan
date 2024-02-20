@@ -3,6 +3,50 @@ import './../vendor/inputMask.js';
 
 // formSelector --- класс формы
 
+const successFormSend = event => {
+	event.target.reset();
+
+	document.querySelectorAll('.form')?.forEach(form => {
+		form.querySelectorAll('.form__input')?.forEach(input => {
+			if (input.classList.contains('just-validate-error-field')) {
+				input.classList.remove('just-validate-error-field');
+			}
+			if (input.classList.contains('just-validate-success-field')) {
+				input.classList.remove('just-validate-success-field');
+			}
+		});
+	});
+
+	// при удачной валидации модальное окно закрывается
+	document.querySelectorAll('.modal').forEach(modal => {
+		modal.classList.contains('active') && modal.classList.remove('active') && body.classList.remove('_lock');
+	});
+
+	const body = document.body;
+	const modal = document.querySelector('.modal-sendForm');
+	const modalClose = modal.querySelector('.modal__body');
+	const btnClose = document.querySelector('.modal-sendForm .modal__close');
+
+	body.classList.add('_lock');
+	modal.classList.add('active');
+
+	btnClose.addEventListener('click', () => {
+		body.classList.remove('_lock');
+		modal.classList.remove('active');
+	});
+
+	modal.addEventListener('click', e => {
+		if (e.target === modalClose) {
+			body.classList.remove('_lock');
+			modal.classList.remove('active');
+		}
+	});
+	setTimeout(() => {
+		body.classList.remove('_lock');
+		modal.classList.remove('active');
+	}, 5000);
+};
+
 const validateForms = form => {
 	const inputTel = form.querySelector('input[type="tel"]');
 
@@ -11,7 +55,7 @@ const validateForms = form => {
 		inputMask.mask(inputTel);
 	}
 
-	const validation = new JustValidate(form);
+	const validation = new JustValidate(form, { focusInvalidField: true });
 
 	const inputName = form.querySelector('.input__name');
 
@@ -19,21 +63,6 @@ const validateForms = form => {
 		// console.log('name', form);
 
 		validation
-			.addField('.input__tel', [
-				{
-					rule: 'required',
-					value: true,
-					errorMessage: 'Некорректный номер',
-				},
-				{
-					rule: 'function',
-					validator: function () {
-						const phone = inputTel.inputmask.unmaskedvalue();
-						return phone.length === 10;
-					},
-					errorMessage: 'Некорректный номер',
-				},
-			])
 			.addField('.input__name', [
 				{
 					rule: 'minLength',
@@ -51,23 +80,25 @@ const validateForms = form => {
 					errorMessage: 'Введите имя',
 				},
 			])
+			.addField('.input__tel', [
+				{
+					rule: 'required',
+					value: true,
+					errorMessage: 'Некорректный номер',
+				},
+				{
+					rule: 'function',
+					validator: function () {
+						const phone = inputTel.inputmask.unmaskedvalue();
+						return phone.length === 10;
+					},
+					errorMessage: 'Некорректный номер',
+				},
+			])
 			.onSuccess(event => {
-				event.target.reset();
-
-				document.querySelectorAll('.form')?.forEach(form => {
-					form.querySelectorAll('.form__input')?.forEach(input => {
-						if (input.classList.contains('just-validate-error-field')) {
-							input.classList.remove('just-validate-error-field');
-						}
-						if (input.classList.contains('just-validate-success-field')) {
-							input.classList.remove('just-validate-success-field');
-						}
-					});
-				});
+				successFormSend(event);
 			});
 	} else {
-		// console.log('tel', form);
-
 		validation
 			.addField('.input__tel', [
 				{
@@ -85,18 +116,7 @@ const validateForms = form => {
 				},
 			])
 			.onSuccess(event => {
-				event.target.reset();
-
-				document.querySelectorAll('.form')?.forEach(form => {
-					form.querySelectorAll('.form__input')?.forEach(input => {
-						if (input.classList.contains('just-validate-error-field')) {
-							input.classList.remove('just-validate-error-field');
-						}
-						if (input.classList.contains('just-validate-success-field')) {
-							input.classList.remove('just-validate-success-field');
-						}
-					});
-				});
+				successFormSend(event);
 			});
 	}
 };

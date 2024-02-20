@@ -18,7 +18,7 @@
 
 	&__input {
 		&.just-validate-error-field {
-			border-color: #b81111;
+			border: 1px solid #b81111;
 
 			&::placeholder {
 				color: #b81111;
@@ -30,7 +30,9 @@
 		}
 
 		&.just-validate-success-field {
-			border-color: #2ccd59;
+			border: 1px solid #2ccd59;
+
+
 
 			~ .input__tel-text {
 				color: #2ccd59;

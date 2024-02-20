@@ -923,38 +923,6 @@ body._lock {
   visibility: visible;
 }
 
-.form__item {
-  position: relative;
-}
-.form__item .just-validate-error-label {
-  position: absolute;
-  left: 30px;
-  top: 14px;
-  font-size: 13px;
-  transform: translateY(-50%);
-}
-@media screen and (max-width: 560px) {
-  .form__item .just-validate-error-label {
-    left: 24px;
-    top: 10px;
-  }
-}
-.form__input.just-validate-error-field {
-  border-color: #b81111;
-}
-.form__input.just-validate-error-field::placeholder {
-  color: #b81111;
-}
-.form__input.just-validate-error-field ~ .input__tel-text {
-  color: #b81111;
-}
-.form__input.just-validate-success-field {
-  border-color: #2ccd59;
-}
-.form__input.just-validate-success-field ~ .input__tel-text {
-  color: #2ccd59;
-}
-
 /* stylelint-disable no-descending-specificity */
 .header .container {
   padding: 0 10px;
@@ -2662,6 +2630,165 @@ body._lock {
 
 .ymaps-2-1-79-copyright {
   display: none !important;
+}
+
+.form__item {
+  position: relative;
+}
+.form__item .just-validate-error-label {
+  position: absolute;
+  left: 30px;
+  top: 14px;
+  font-size: 13px;
+  transform: translateY(-50%);
+}
+@media screen and (max-width: 560px) {
+  .form__item .just-validate-error-label {
+    left: 24px;
+    top: 10px;
+  }
+}
+.form__input.just-validate-error-field {
+  border: 1px solid #b81111;
+}
+.form__input.just-validate-error-field::placeholder {
+  color: #b81111;
+}
+.form__input.just-validate-error-field ~ .input__tel-text {
+  color: #b81111;
+}
+.form__input.just-validate-success-field {
+  border: 1px solid #2ccd59;
+}
+.form__input.just-validate-success-field ~ .input__tel-text {
+  color: #2ccd59;
+}
+
+.modal {
+  z-index: -100;
+  display: none;
+  padding: 0 10px;
+  transition: all 0.3s ease;
+  inset: 0;
+}
+.modal__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0;
+  box-shadow: 0 -5px 0 var(--red);
+  background-color: var(--white);
+  border-radius: 50px;
+}
+@media (max-width: 1420px) {
+  .modal__inner {
+    border-radius: calc(20px + 30 * (100vw - 320px) / 1100);
+  }
+}
+.modal__close {
+  position: absolute;
+  right: -52px;
+  top: 5px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+@media (max-width: 1420px) {
+  .modal__close {
+    width: calc(35px + 5 * (100vw - 320px) / 1100);
+  }
+}
+@media (max-width: 1420px) {
+  .modal__close {
+    height: calc(35px + 5 * (100vw - 320px) / 1100);
+  }
+}
+@media screen and (max-width: 730px) {
+  .modal__close {
+    right: 15px;
+    top: -53px;
+  }
+}
+.modal-sendForm {
+  padding: 0 10px;
+}
+.modal-sendForm .modal__inner {
+  padding: 45px 47px 30px;
+  width: 100%;
+  max-width: 612px;
+}
+@media screen and (max-width: 560px) {
+  .modal-sendForm .modal__inner {
+    padding: 20px 13px;
+  }
+}
+.modal-sendForm__title {
+  font-weight: 500;
+  font-size: 43px;
+  line-height: 105%;
+  text-align: center;
+  color: #31333e;
+}
+@media (max-width: 1420px) {
+  .modal-sendForm__title {
+    font-size: calc(28px + 15 * (100vw - 320px) / 1100);
+  }
+}
+@media screen and (max-width: 750px) {
+  .modal-sendForm__title {
+    font-weight: 700;
+  }
+}
+.modal-sendForm__subtitle {
+  margin-top: 12px;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 135%;
+  text-align: center;
+  color: #90929a;
+}
+@media (max-width: 1420px) {
+  .modal-sendForm__subtitle {
+    font-size: calc(17px + 3 * (100vw - 320px) / 1100);
+  }
+}
+.modal.active {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  display: block;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.modal.active .modal__inner {
+  animation-name: show_modal;
+  animation-duration: 0.7s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+@keyframes show_modal {
+  0% {
+    transform: translateY(300px) scale(0.9);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+.modal.active .modal__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  min-height: 100%;
+}
+@media screen and (max-width: 560px) {
+  .modal.active .modal__body {
+    padding: 5px 10px 1px;
+  }
 }
 
 .footer {

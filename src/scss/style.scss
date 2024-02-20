@@ -10,7 +10,6 @@
 
 // components
 // @import './components/modal';
-@import './components/form';
 
 // header
 @import './components/header';
@@ -25,6 +24,10 @@
 @import './components/trade-in-credit';
 @import './components/advantages';
 @import './components/address-map';
+
+// additionally
+@import './components/form';
+@import './components/modal';
 
 // footer
 @import './components/footer';
