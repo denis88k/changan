@@ -3,6 +3,8 @@ import { addClass, removeClass } from './helpers.js';
 const modalErrorDelete = modal => {
 	modal.querySelectorAll('.form__input')?.forEach(input => {
 		removeClass(input, 'just-validate-error-field');
+		removeClass(input, 'just-validate-success-field');
+		input.value = '';
 	});
 	modal.querySelectorAll('.just-validate-error-label')?.forEach(errorElement => errorElement.remove());
 };
